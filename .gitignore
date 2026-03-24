@@ -1,0 +1,42 @@
+# --- REPOSITORIO GLOBAL DE ST (IMPORTANTE) ---
+# Esto evita que subas gigas de librerías que cualquiera puede bajar de internet
+STM32CubeRepository/
+
+# --- ARCHIVOS TEMPORALES DE LOGS ---
+*.txt
+*.log
+
+# --- CONFIGURACIÓN DE WORKSPACE ---
+# Ignora los metadatos locales de tu IDE para que no den conflicto en otro PC
+**/ .metadata/
+**/ RemoteSystemsTempFiles/
+**/ .recommenders/
+**/ .linters/
+
+# --- ARCHIVOS DE COMPILACIÓN (BASURA BINARIA) ---
+# Buscamos en todas las subcarpetas del Workspace
+**/Debug/
+**/Release/
+**/bin/
+**/obj/
+
+# Extensiones de archivos generados
+**/*.o
+**/*.elf
+**/*.list
+**/*.map
+**/*.bin
+**/*.su
+**/*.d
+
+# --- DOCUMENTACIÓN ---
+# Si quieres subir los PDFs de las prácticas, comenta la siguiente línea con un #
+# *.pdf
+
+# --- EXCEPCIONES (LO QUE SÍ QUEREMOS) ---
+!**/.project
+!**/.cproject
+!**/.ioc
+!**/Src/
+!**/Inc/
+!**/Drivers/STM32CubeRepository/ 
