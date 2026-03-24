@@ -8,10 +8,10 @@ STM32CubeRepository/
 
 # --- CONFIGURACIÓN DE WORKSPACE ---
 # Ignora los metadatos locales de tu IDE para que no den conflicto en otro PC
-**/ .metadata/
+**/.metadata/
 **/ RemoteSystemsTempFiles/
-**/ .recommenders/
-**/ .linters/
+**/.recommenders/
+**/.linters/
 
 # --- ARCHIVOS DE COMPILACIÓN (BASURA BINARIA) ---
 # Buscamos en todas las subcarpetas del Workspace
