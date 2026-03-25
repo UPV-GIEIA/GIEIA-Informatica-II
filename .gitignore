@@ -1,42 +1,45 @@
-# --- REPOSITORIO GLOBAL DE ST (IMPORTANTE) ---
-# Esto evita que subas gigas de librerías que cualquiera puede bajar de internet
-STM32CubeRepository/
+# --- ARCHIVOS DE CONFIGURACIÓN DEL IDE (ESTO SÍ SE SUBE) ---
+# No ignoramos .project, .cproject ni .ioc porque definen el proyecto y la config. de CubeMX
+# Estos NO deben estar en el ignore (ya los tienes como excepciones al final, lo cual es correcto)
 
-# --- ARCHIVOS TEMPORALES DE LOGS ---
-*.txt
+# --- ARCHIVOS TEMPORALES Y DE SISTEMA ---
+.metadata/
+.settings/
+RemoteSystemsTempFiles/
+.recommenders/
 *.log
+*.txt
 
-# --- CONFIGURACIÓN DE WORKSPACE ---
-# Ignora los metadatos locales de tu IDE para que no den conflicto en otro PC
-**/.metadata/
-**/ RemoteSystemsTempFiles/
-**/.recommenders/
-**/.linters/
-
-# --- ARCHIVOS DE COMPILACIÓN (BASURA BINARIA) ---
-# Buscamos en todas las subcarpetas del Workspace
+# --- COMPILACIÓN (BASURA BINARIA QUE NO QUEREMOS) ---
+# Ignoramos las carpetas donde se guardan los ejecutables (.elf, .bin) y objetos (.o)
 **/Debug/
 **/Release/
 **/bin/
 **/obj/
 
-# Extensiones de archivos generados
-**/*.o
-**/*.elf
-**/*.list
-**/*.map
-**/*.bin
-**/*.su
-**/*.d
+# Extensiones específicas de archivos generados por el compilador
+*.o
+*.elf
+*.list
+*.map
+*.bin
+*.su
+*.d
+*.launch
+
+# --- LIBRERÍAS EXTERNAS ---
+# Solo ignoramos el repositorio global de ST, no las carpetas 'Drivers' locales del proyecto
+# que son necesarias para que el código compile en otro PC.
+STM32CubeRepository/
 
 # --- DOCUMENTACIÓN ---
-# Si quieres subir los PDFs de las prácticas, comenta la siguiente línea con un #
+# Descomenta la siguiente línea si NO quieres subir los enunciados en PDF
 # *.pdf
 
-# --- EXCEPCIONES (LO QUE SÍ QUEREMOS) ---
+# --- EXCEPCIONES: LO QUE SIEMPRE DEBE ESTAR ---
+!**/Src/
+!**/Inc/
+!**/Drivers/
 !**/.project
 !**/.cproject
 !**/.ioc
-!**/Src/
-!**/Inc/
-!**/Drivers/STM32CubeRepository/ 
